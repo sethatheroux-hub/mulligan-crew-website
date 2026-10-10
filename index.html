@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mulligan Crew — Social Golf for Your Crew</title>
+  <title>Mulligan Crew — The Digital Clubhouse for Group Golf</title>
+  <meta name="description" content="One scorekeeper runs the round. The group follows live. Mulligan Crew keeps every Season, Trip, result, and story together." />
+  <meta property="og:title" content="Mulligan Crew — Golf is better together" />
+  <meta property="og:description" content="Score the group. Keep the stories. Build a season." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -62,8 +65,8 @@
     /* HERO */
     .hero {
       position: relative;
-      height: 100vh; min-height: 600px;
-      display: flex; align-items: flex-end;
+      min-height: 760px;
+      display: flex; align-items: center;
       overflow: hidden;
     }
     .hero-bg {
@@ -78,22 +81,30 @@
         background-size: auto 110%;
       }
     }
+    .hero-bg {
+      background:
+        radial-gradient(circle at 78% 26%, rgba(78,184,106,0.22), transparent 24%),
+        radial-gradient(circle at 18% 72%, rgba(45,138,71,0.16), transparent 28%),
+        linear-gradient(145deg, #163828 0%, #0C2218 44%, #071610 100%);
+      background-position: center;
+      background-size: cover;
+    }
     .hero-bg::after {
       content: '';
       position: absolute; inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(7,22,16,0.0)  0%,
-        rgba(7,22,16,0.0)  38%,
-        rgba(7,22,16,0.6)  62%,
-        rgba(7,22,16,0.94) 80%,
+        rgba(7,22,16,0.08) 0%,
+        rgba(7,22,16,0.12) 38%,
+        rgba(7,22,16,0.42) 68%,
+        rgba(7,22,16,0.88) 90%,
         rgba(7,22,16,1.0)  100%
       );
     }
     .hero-content {
       position: relative; z-index: 2;
-      width: 100%; padding: 0 44px 72px;
-      max-width: 800px;
+      width: 100%; padding: 112px 44px 88px;
+      max-width: 980px;
     }
     .hero-eyebrow {
       font-size: 0.72rem; font-weight: 600;
@@ -197,6 +208,7 @@
       border-top: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
     }
+    .legacy-screens { display: none; }
     .screenshots-inner { max-width: 1100px; margin: 0 auto; }
     .screens-grid {
       display: grid;
@@ -336,7 +348,7 @@
   <div class="hero-content">
     <p class="hero-eyebrow">Built for golf crews</p>
     <h1 class="hero-headline">Your crew deserves<br><em>a real record.</em></h1>
-    <p class="hero-sub">One captain runs the card. The whole crew gets the history — leaderboards, badges, trip recaps, side bets — saved forever.</p>
+    <p class="hero-sub">One scorekeeper runs the round. The group follows live. Every result builds your Seasons, Trips, and shared history.</p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/us/app/mulligan-crew/id6759926474" class="appstore-badge" style="padding:11px 22px">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="width:20px;height:20px;fill:#fff;flex-shrink:0"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
@@ -345,14 +357,14 @@
           <span class="badge-large" style="font-size:0.95rem">App Store</span>
         </div>
       </a>
-      <span class="hero-note">Free · iOS · 30-day trial</span>
+      <span class="hero-note">Built for iPhone</span>
     </div>
   </div>
 </section>
 
 <section class="tagline">
   <h2>Golf apps track <span>your</span> score.<br>Mulligan Crew tracks <span>your crew.</span></h2>
-  <p>Every round, every bet, every badge — your crew's full history, one tee time at a time. Because the scorecard disappears. The story shouldn't.</p>
+  <p>Run the scorecard from one phone, let the Crew follow live, and turn every round into the standings, stories, and history your group usually loses in the group chat.</p>
 </section>
 
 <section class="founder-strip">
@@ -362,43 +374,43 @@
 <section class="features">
   <div class="features-inner">
     <span class="section-label">How it works</span>
-    <h2 class="section-title">Everything your crew needs. Nothing it doesn't.</h2>
+    <h2 class="section-title">Simple on the first tee. Deeper every round.</h2>
     <div class="features-grid">
       <div class="feature-card">
         <span class="feature-icon">📋</span>
-        <h3>Captain Mode</h3>
-        <p>One captain subscribes and runs the scorecard. Everyone else joins free — and gets full stats, history, and recaps automatically.</p>
+        <h3>One scorekeeper</h3>
+        <p>One phone can score the foursome. Everyone else can follow live without repeating the setup.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🏆</span>
-        <h3>Crew Leaderboards</h3>
-        <p>All-time wins, course records, Crew MVP, Ironman, Mr. Money Bags. Your crew's own Hall of Fame, built round by round.</p>
+        <h3>A permanent Crew</h3>
+        <p>Keep the regular group, every result, and the stories around the score in one private digital clubhouse.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">✈️</span>
-        <h3>Trip Recaps</h3>
-        <p>Bandon. Pebble. The annual buddy trip. Full recap with podium, crew totals, bets, and memories — saved and shareable forever.</p>
+        <h3>Trips without the spreadsheet</h3>
+        <p>Plan tee times and groups, follow shared standings, combine Championship foursomes, and keep the final recap.</p>
       </div>
       <div class="feature-card">
-        <span class="feature-icon">💰</span>
-        <h3>Bets &amp; Side Action</h3>
-        <p>Beer bets, money pots, long drives. Track every wager and settle up with real numbers at the 19th hole.</p>
+        <span class="feature-icon">🏅</span>
+        <h3>Crew Cup Seasons</h3>
+        <p>Turn regular mixed-skill golf into net Stableford standings, counting rounds, and a personal Championship finale.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🔥</span>
-        <h3>Round Badges</h3>
-        <p>Heated Up, Scrambler, Wild Thing, Disaster Artist — round-specific badges that tell the story no scorecard ever captures.</p>
+        <h3>More than the score</h3>
+        <p>Save Darts, Great Saves, Meltdowns, friendly point games, records, and designed Round Stories.</p>
       </div>
       <div class="feature-card">
         <span class="feature-icon">👻</span>
-        <h3>Ghost Mode</h3>
-        <p>Race your personal best, hole by hole. Watch the Ghost pace in real time and find out if today's finally the day.</p>
+        <h3>Golfers can join later</h3>
+        <p>Captains can add golfers before they download the app. Their Crew history stays intact if they claim their spot later.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="screenshots">
+<section class="screenshots legacy-screens" aria-hidden="true">
   <div class="screenshots-inner">
     <span class="section-label">Inside the App</span>
     <h2 class="section-title">Built for the course.<br>Built for the 19th hole.</h2>
@@ -427,11 +439,40 @@
   </div>
 </section>
 
+<section class="features" id="how-it-works">
+  <div class="features-inner">
+    <span class="section-label">How a round works</span>
+    <h2 class="section-title">Start together. Score quickly. Keep the story.</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="section-label">01</span>
+        <h3>Choose the group</h3>
+        <p>Search the course and tees, choose nine or eighteen, and bring your Crew, Trip group, or guests.</p>
+      </div>
+      <div class="feature-card">
+        <span class="section-label">02</span>
+        <h3>Score the foursome</h3>
+        <p>Switch golfers, enter strokes, and move on. Crew HCP applies the group's agreed extra strokes by hole difficulty.</p>
+      </div>
+      <div class="feature-card">
+        <span class="section-label">03</span>
+        <h3>Follow live</h3>
+        <p>Other phones can join by QR or code to see the current hole, group leaderboard, and saved moments.</p>
+      </div>
+      <div class="feature-card">
+        <span class="section-label">04</span>
+        <h3>Share the finish</h3>
+        <p>The completed scorecard becomes Crew or Trip history and a polished story made for the group chat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="difference">
   <div class="difference-inner">
     <span class="section-label">The Difference</span>
-    <h2>Your stat tracker tracks numbers.<br><span>Mulligan Crew makes sure you don't forget.</span></h2>
-    <p>Who collapsed on 17. Who birdied the stretch that won the trip. Who's been quietly carrying the crew for three straight years. The scorecard gets tossed. The group chat moves on. Mulligan Crew keeps the record.</p>
+    <h2>Golf apps track your game.<br><span>Mulligan Crew keeps the group together.</span></h2>
+    <p>Who birdied the stretch that won the trip. Who keeps climbing the Season table. Who owns the Crew record. The scorecard gets tossed and the group chat moves on. Mulligan Crew keeps the shared record.</p>
     <a href="https://apps.apple.com/us/app/mulligan-crew/id6759926474" class="appstore-badge" style="padding:11px 22px">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="width:20px;height:20px;fill:#fff;flex-shrink:0"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         <div class="appstore-badge-text">
@@ -456,7 +497,7 @@
 
 <section class="cta-section">
   <h2>Your crew has a story.<br><em>Start keeping it.</em></h2>
-  <p>Free to download. One captain, the whole crew gets the history.</p>
+  <p>One scorekeeper. Every golfer. One shared history.</p>
   <a href="https://apps.apple.com/us/app/mulligan-crew/id6759926474" class="appstore-badge" style="padding:14px 32px">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="width:26px;height:26px;fill:#fff;flex-shrink:0"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         <div class="appstore-badge-text">
@@ -464,7 +505,7 @@
           <span class="badge-large" style="font-size:1.1rem">App Store</span>
         </div>
       </a>
-  <p class="cta-fine">iOS only · 30-day free trial · No credit card required</p>
+  <p class="cta-fine">Built for iPhone · Crew HCP is not an official Handicap Index · No payment processing</p>
 </section>
 
 <footer>
@@ -472,7 +513,8 @@
   <div class="footer-links">
     <a href="https://sethatheroux-hub.github.io/mulligancrew-legal/#privacy">Privacy Policy</a>
     <a href="https://sethatheroux-hub.github.io/mulligancrew-legal/#terms">Terms of Use</a>
-    <a href="mailto:mulligancrewsupport@gmail.com">Support</a>
+    <a href="/support/">Support</a>
+    <a href="mailto:mulligancrewsupport@gmail.com">Email us</a>
   </div>
   <p>© 2026 Mulligan Crew. All rights reserved.</p>
 </footer>
