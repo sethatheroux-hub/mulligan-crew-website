@@ -203,6 +203,7 @@ h3 {
 .platform-note { margin-top: 20px; color: var(--text-secondary); font-size: 0.82rem; }
 .hero-art {
   position: relative;
+  height: 650px;
   min-height: 650px;
   display: grid;
   place-items: center;
@@ -473,7 +474,7 @@ h3 {
   .nav-links > a:not(.nav-cta) { display: none; }
   .hero-inner { grid-template-columns: 1fr; padding-top: 72px; }
   .hero-copy { max-width: 760px; }
-  .hero-art { min-height: 610px; }
+  .hero-art { height: 610px; min-height: 610px; }
   .hero-photo { width: 74%; right: 2%; }
   .split-section, .story-inner, .origin { grid-template-columns: 1fr; }
   .split-section.reverse .split-copy, .split-section.reverse .screen-stage { order: initial; }
@@ -496,7 +497,7 @@ h3 {
   .hero { min-height: auto; }
   .hero-inner { min-height: auto; padding: 64px 0 70px; gap: 32px; }
   h1 { font-size: clamp(3rem, 15vw, 5rem); }
-  .hero-art { min-height: 490px; }
+  .hero-art { height: 490px; min-height: 490px; }
   .hero-photo { width: 94%; height: 74%; right: -15%; }
   .hero-screen { width: 72%; transform: rotate(1deg); }
   .hero-screen.secondary { width: 58%; right: -4%; }
