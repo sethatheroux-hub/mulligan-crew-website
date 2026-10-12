@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
