@@ -1,0 +1,22 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "VCLY53R2A9.com.mulligancrew.app",
+          "VCLY53R2A9.com.mulligancrew.prototype"
+        ],
+        "components": [
+          {
+            "/": "/trips",
+            "comment": "Mulligan Crew Trip invitation without trailing slash"
+          },
+          {
+            "/": "/trips/*",
+            "comment": "Mulligan Crew Trip invitations and fallback page"
+          }
+        ]
+      }
+    ]
+  }
+}
