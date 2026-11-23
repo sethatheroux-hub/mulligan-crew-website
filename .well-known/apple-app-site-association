@@ -14,6 +14,14 @@
           {
             "/": "/trips/*",
             "comment": "Mulligan Crew Trip invitations and fallback page"
+          },
+          {
+            "/": "/crews",
+            "comment": "Mulligan Crew Crew invitation without trailing slash"
+          },
+          {
+            "/": "/crews/*",
+            "comment": "Mulligan Crew Crew invitations and fallback page"
           }
         ]
       }
