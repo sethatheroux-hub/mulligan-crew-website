@@ -22,6 +22,14 @@
           {
             "/": "/crews/*",
             "comment": "Mulligan Crew Crew invitations and fallback page"
+          },
+          {
+            "/": "/reset-password",
+            "comment": "Mulligan Crew password recovery"
+          },
+          {
+            "/": "/reset-password/*",
+            "comment": "Mulligan Crew password recovery with trailing slash"
           }
         ]
       }
