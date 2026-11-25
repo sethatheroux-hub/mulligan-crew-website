@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reset your password — Mulligan Crew</title>
-  <meta name="description" content="Open your secure Mulligan Crew password-recovery link in the iPhone app." />
+  <meta name="description" content="Securely choose a new password for your Mulligan Crew account." />
   <meta name="theme-color" content="#03271F" />
   <meta name="robots" content="noindex,nofollow" />
+  <meta name="referrer" content="no-referrer" />
   <link rel="icon" href="/assets/brand-tile.png" />
   <link rel="apple-touch-icon" href="/assets/brand-tile.png" />
-  <link rel="stylesheet" href="/assets/site.css?v=20261125-1" />
-  <script defer src="/assets/password-reset.js?v=20261125-1"></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20261125-2" />
+  <script defer src="/assets/password-reset.js?v=20261125-2"></script>
 </head>
 <body class="invite-page">
   <main class="invite-shell">
@@ -25,21 +26,47 @@
 
       <div class="invite-copy">
         <p class="eyebrow">Account recovery</p>
-        <h1 id="reset-title">Choose a new password in Mulligan Crew.</h1>
-        <p class="lede" id="reset-description">For your security, finish this reset in the Mulligan Crew app on your iPhone.</p>
+        <h1 id="reset-title">Choose a new password.</h1>
+        <p class="lede" id="reset-description">Reset it securely here, then return to Mulligan Crew and sign in.</p>
       </div>
 
-      <div class="invite-actions">
-        <a class="button-primary invite-button" id="open-app" href="mulligan-crew:///reset-password">Open Mulligan Crew</a>
-        <a class="button-secondary invite-button" href="https://apps.apple.com/us/app/mulligan-crew/id6759926474">Download free on the App Store</a>
+      <form class="reset-form" id="password-reset-form" novalidate>
+        <div class="reset-field">
+          <label for="new-password">New password</label>
+          <input id="new-password" name="new-password" type="password" minlength="6" autocomplete="new-password" required placeholder="At least 6 characters" />
+        </div>
+        <div class="reset-field">
+          <label for="confirm-password">Confirm new password</label>
+          <input id="confirm-password" name="confirm-password" type="password" minlength="6" autocomplete="new-password" required placeholder="Enter it again" />
+        </div>
+        <p class="reset-status" id="reset-status" role="status" aria-live="polite"></p>
+        <button class="button-primary invite-button reset-submit" id="reset-submit" type="submit">Save new password</button>
+      </form>
+
+      <div class="reset-result" id="reset-success" hidden>
+        <div class="reset-result-icon" aria-hidden="true">✓</div>
+        <h2>Password updated.</h2>
+        <p>Your new password is ready. Return to Mulligan Crew and sign in.</p>
+        <div class="invite-actions">
+          <a class="button-primary invite-button" href="mulligan-crew:///">Open Mulligan Crew</a>
+          <a class="button-secondary invite-button" href="https://apps.apple.com/us/app/mulligan-crew/id6759926474">View on the App Store</a>
+        </div>
+      </div>
+
+      <div class="reset-result" id="reset-invalid" hidden>
+        <h2>This reset link is invalid or expired.</h2>
+        <p>Return to Mulligan Crew, choose “I already have an account,” and request a new email.</p>
+        <div class="invite-actions">
+          <a class="button-primary invite-button" href="mulligan-crew:///">Return to Mulligan Crew</a>
+        </div>
       </div>
 
       <div class="invite-steps" aria-label="How to reset your password">
-        <div><span>1</span><p><strong>On iPhone:</strong> Tap “Open Mulligan Crew.”</p></div>
-        <div><span>2</span><p><strong>On a computer:</strong> Open this same email on the iPhone where Mulligan Crew is installed.</p></div>
+        <div><span>1</span><p><strong>Choose a password:</strong> Enter it twice and save.</p></div>
+        <div><span>2</span><p><strong>Return to the app:</strong> Sign in with your email and new password.</p></div>
       </div>
 
-      <p class="invite-note" id="reset-note">This recovery link is temporary and is handled only on your device.</p>
+      <p class="invite-note" id="reset-note">This recovery link is temporary. Your password is sent securely and directly to Mulligan Crew’s authentication provider.</p>
     </section>
   </main>
 </body>
